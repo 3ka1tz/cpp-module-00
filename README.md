@@ -4,6 +4,7 @@ Namespaces, classes, member functions, stdio streams, initialization lists, stat
 ## [Exercise 00: Megaphone](https://github.com/3ka1tz/cpp00/tree/main/project/ex00)
 Just to make sure that everybody is awake, write a program that produces the following output:
 
+```bash
 $ ./megaphone "shhhhh... I think the students are asleep..."
 
 SHHHHH... I THINK THE STUDENTS ARE ASLEEP...
