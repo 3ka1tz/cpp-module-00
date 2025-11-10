@@ -1,15 +1,11 @@
-/* megaphone.cpp */
+#include <iostream>
 
-#include <cctype> // provides toupper
-#include <iostream> // provides cout
-
-// int std::toupper(int ch);
-
-const char* DEFAULT_OUTPUT = "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+const std::string DEFAULT = "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 
 int main(int argc, char** argv) {
     if (argc < 2) {
-        std::cout << DEFAULT_OUTPUT << "\n";
+        std::cout << DEFAULT << std::endl;
+
         return 0;
     }
     
@@ -18,7 +14,7 @@ int main(int argc, char** argv) {
             std::cout << static_cast<char>(std::toupper(static_cast<unsigned char>((argv[i][j]))));
         }
     }
-    std::cout << "\n";
+    std::cout << std::endl;
 
     return 0;
 }
