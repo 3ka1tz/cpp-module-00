@@ -1,26 +1,24 @@
-# Makefile (cpp00-ex00)
+NAME = cpp00_ex00
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SRC = megaphone.cpp
-OBJ = megaphone.o
+SRC = main.cpp Fixed.cpp
+OBJ = $(SRC:.cpp=.o)
 
-EXEC = megaphone
-
-all: $(EXEC)
-
-$(EXEC): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+all: $(NAME)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(EXEC)
+	rm -f $(NAME)
 
 re: fclean all
 

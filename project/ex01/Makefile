@@ -1,26 +1,24 @@
-# Makefile (cpp00-ex01)
+NAME = cpp00_ex01
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SRCS = Contact.cpp PhoneBook.cpp main.cpp
-OBJS = $(SRCS:.cpp=.o)
+SRC = main.cpp Fixed.cpp
+OBJ = $(SRC:.cpp=.o)
 
-EXEC = PhoneBook
-
-all: $(EXEC)
-
-$(EXEC): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+all: $(NAME)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(EXEC)
+	rm -f $(NAME)
 
 re: fclean all
 
