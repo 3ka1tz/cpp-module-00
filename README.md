@@ -16,5 +16,6 @@ DAMNIT ! SORRY STUDENTS, I THOUGHT THIS THING WAS OFF.
 $ ./megaphone
 
 \* LOUD AND UNBEARABLE FEEDBACK NOISE *
+```
 
 Solve the exercises in a C++ manner.
