@@ -1,5 +1,3 @@
-/* PhoneBook.hpp */
-
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
@@ -8,16 +6,16 @@
 #define MAX_CONTACTS 8
 
 class PhoneBook {
-private:
-    Contact contacts[MAX_CONTACTS];
-    int index;
-
 public:
     PhoneBook();
     ~PhoneBook();
 
     void add();
-    void search();
+    void search() const;
+
+private:
+    Contact contacts[MAX_CONTACTS];
+    int index;
 };
 
-#endif // PHONEBOOK_HPP
+#endif

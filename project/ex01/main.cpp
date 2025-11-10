@@ -1,7 +1,5 @@
-/* main.cpp */
-
-#include <cstdlib> // provides exit
-#include <iostream> // provides cin, cout, endl
+#include <cstdlib>
+#include <iostream>
 
 #include "PhoneBook.hpp"
 
@@ -19,15 +17,12 @@ int main() {
 
         if (input == "ADD") {
             phonebook.add();
-        }
-        else if (input == "SEARCH") {
+        } else if (input == "SEARCH") {
             phonebook.search();
-        }
-        else if (input == "EXIT") {
+        } else if (input == "EXIT") {
             break;
-        }
-        else {
-            std::cout << "\033[31m" << "Unrecognized command" << "\033[0m" << std::endl;
+        } else {
+            std::cout << "\033[31mUnrecognized command\033[0m" << std::endl;
         }
     }
 }

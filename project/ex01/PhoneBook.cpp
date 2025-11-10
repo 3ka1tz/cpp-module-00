@@ -1,5 +1,3 @@
-/* PhoneBook.cpp */
-
 #include <cctype> // provides isalpha, isdigit
 #include <cstdlib> // provides atoi, exit, size_t
 #include <iomanip> // provides setw
@@ -146,7 +144,7 @@ std::string formatString(const std::string& str) {
     }
 }
 
-void PhoneBook::search() {
+void PhoneBook::search() const {
     if (this->index <= 0) {
         std::cout << "\033[33mNo contacts are stored. Try adding one first!\033[0m" << std::endl;
         return;
